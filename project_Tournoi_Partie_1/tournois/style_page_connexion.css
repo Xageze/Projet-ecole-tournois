@@ -1,0 +1,161 @@
+body {
+  	background: url("ressources/background_login.png") no-repeat center fixed; 
+  	background-size: cover;
+}
+/* DEBUT CSS HEADER */
+header {
+	position: fixed;
+	width: 100%;
+	background-color: #333;
+	/*overflow: hidden;*/
+
+	margin: -8px;
+	padding: 35px 14px 15px 14px;
+
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 22px;
+}
+header > div {
+	display: flex;
+}
+
+.right_header > a {
+	position: absolute;
+	color: white;
+	right: 70px;
+	padding: 5px 10px 10px 10px;
+	text-decoration: none;
+}
+.dropdown-content {
+  	display: none;
+ 	position: absolute;
+ 	font-size: 18px;
+ 	color: red;
+	right: 0px;
+  	background-color: #333;
+  	min-width: 260px;
+  	border-top: 1px grey solid;
+  	margin-top: 39px;
+  	padding: 15px 0px 15px 15px;
+  	z-index: 1;
+}
+.dropdown-content > a {
+	padding: 5px;
+	text-decoration: none;
+}
+.dropdown-content > a:link, .dropdown-content > a:visited, .dropdown-content > a:active {
+	color: #D1D1D1;
+}
+a.dropdown_deconnexion:hover, a.dropdown_compte:hover {
+	color: white;
+	border-left: transparent 6px solid; 
+}
+.right_header:hover .dropdown-content {
+ 	display: block;
+}
+
+.left_header > a {
+	padding: 11px 20px 11px 20px;
+
+	border-bottom: 0px solid transparent;
+	transition: border-bottom 0.5s;
+	text-decoration: none;
+}
+.left_header > a:link, .left_header > a:visited{
+	color: #D1D1D1;
+}
+.left_header > a:active {
+	color: white; 
+}
+.left_header > a:hover {
+	border-bottom: solid #9C92FF 4px;
+	color: white;
+}
+/* FIN CSS HEADER */
+.parent {
+  	position: absolute;
+  	/* Centré */
+  	top: 53%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	/* Fond blanc, bordure, taille */
+  	background-color: rgb(255, 255, 255, 1);
+  	width: 580px;
+  	height: 750px;
+
+  	font-family: Verdana;
+  	font-size: 34px;
+  	text-align: center;
+}
+
+.enfant > h3 { /* CSS Tu titre, ici "connexion" + bordure clean */
+	font-size: 34px;
+	padding: 35px 0px 45px 0px;
+	margin-bottom: 80px;
+	border-bottom: rgb(0,0,0,0.8) 1px solid;
+}
+.input_login { /* CSS Des 2 inputs */
+	padding: 30px 20px 10px 20px;
+	margin: 20px;
+	font-size: 26px;
+
+	background-color: #E5E5E5;
+	border: none;
+	border-radius: 5px;
+}
+input::-webkit-input-placeholder  { /* Fontcionne avec le css du dessous */
+  -webkit-transition: opacity 0.2s linear; 
+  color: gray;
+}
+input:focus::-webkit-input-placeholder  { /* Rend le text transparent sur 0.2s pour après afficher le label plus haut */
+  opacity: 0;
+}
+input:not(.submit) { /* CSS des input sauf le bouton submit */
+	color: rgb(0,0,0,1);
+	width: 70%;
+	height: 40px;
+}
+label { /* CSS des label cachés */
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 18px;
+	z-index: -1;
+    color: #999;
+    left: 13%;
+    padding: 29px 0px 10px 0px; 
+}
+/*input:focus {
+	padding: 30px 20px 10px 20px;
+}*/
+input:focus + .control-label { /* Fait apparaitre les label cachés */ 
+	-webkit-animation: fadeIn ease 0.4s;
+	z-index: 1;
+}
+.submit { /* Bouton submit */
+	background: url("ressources/login.png") no-repeat; 
+	background-size: 110px 110px;
+	width: 113px;
+	height: 113px;
+	border: 2px black solid;
+	border-radius: 0px;
+	margin-top: 50px;
+}
+.submit:hover {
+	background-color: green;
+	opacity: 0.6;
+}
+
+
+/* Pour faire fonctionner le fadeIn */
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+40% {opacity:0;}
+100% {opacity:1;}
+}
+
+.message_erreur {
+	color: red;
+	font-size: 20px;
+}

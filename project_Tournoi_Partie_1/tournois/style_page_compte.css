@@ -1,0 +1,117 @@
+h1 {
+	padding-top: 20%;
+	font-size: 40px;
+	font-family: Verdana;
+}
+body {
+	background: url("ressources/background_page_compte.jpeg") no-repeat center fixed; 
+  	background-size: cover;
+	margin-bottom: 8%;
+}
+header {
+	position: fixed;
+	width: 100%;
+	background-color: #333;
+	/*overflow: hidden;*/
+
+	margin: -8px;
+	padding: 35px 14px 15px 14px;
+
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 22px;
+}
+header > div {
+	display: flex;
+}
+
+.right_header > a {
+	position: absolute;
+	color: white;
+	right: 70px;
+	padding: 5px 10px 10px 10px;
+	text-decoration: none;
+}
+.dropdown-content {
+  	display: none;
+ 	position: absolute;
+ 	font-size: 18px;
+ 	color: red;
+	right: 0px;
+  	background-color: #333;
+  	min-width: 260px;
+  	border-top: 1px grey solid;
+  	margin-top: 39px;
+  	padding: 15px 0px 15px 15px;
+  	z-index: 1;
+}
+.dropdown-content > a {
+	padding: 5px;
+	text-decoration: none;
+}
+.dropdown-content > a:link, .dropdown-content > a:visited, .dropdown-content > a:active {
+	color: #D1D1D1;
+}
+a.dropdown_deconnexion:hover, a.dropdown_compte:hover {
+	color: white;
+	border-left: transparent 6px solid; 
+}
+.right_header:hover .dropdown-content {
+ 	display: block;
+}
+
+.left_header > a {
+	padding: 11px 20px 11px 20px;
+
+	border-bottom: 0px solid transparent;
+	transition: border-bottom 0.5s;
+	text-decoration: none;
+}
+.left_header > a:link, .left_header > a:visited {
+	color: #D1D1D1;
+}
+.left_header > a:active {
+	color: white; 
+}
+.left_header > a:hover {
+	border-bottom: solid #9C92FF 4px;
+	color: white;
+}
+
+.section_parent {
+  	margin: 0;
+  	position: absolute;
+
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+
+  	background-color: rgb(0, 0, 0, 0.5);
+  	border: solid 1px black;
+  	width: 800px;
+  	height: 700px;
+
+  	text-align: center;
+
+  	font-family: Verdana;
+	color: white;
+}
+.section_enfant > h3 {
+	font-size: 34px;
+
+	padding: 20px;
+	border-bottom: rgb(255,255,255,0.8) 1px solid;
+	margin-bottom: 80px;
+} 
+.section_enfant > p {
+	font-size: 24px;
+}
+.section_enfant input {
+	color: rgb(0,0,0,0.7);
+	font-size: 18px;
+	text-align: center;
+	width: 70%;
+	height: 50px;
+}
+
